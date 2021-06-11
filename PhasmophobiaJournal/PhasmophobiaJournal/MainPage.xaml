@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhasmophobiaJournal.MainPage"
+             BackgroundColor="#000000">
+    <StackLayout>
+        <Frame BackgroundColor="#000000" Padding="24">
+            <Label Text="Phasmophobia Helper" HorizontalTextAlignment="Center" TextColor="LightGray" FontSize="32"/>
+        </Frame>
+        <CollectionView x:Name="collectionViewEvidences" 
+                    ItemsSource="{Binding Evidences}" 
+                    SelectionMode="Multiple" 
+                    SelectionChanged="OnEvidenceSelected">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Span="1" Orientation="Vertical" VerticalItemSpacing="5" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                            <Frame.Triggers>
+                                <DataTrigger TargetType="Frame" Binding="{Binding State}" Value="Current">
+                                    <Setter Property="BackgroundColor" Value="#32CD32"></Setter>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Frame" Binding="{Binding State}" Value="Possible">
+                                    <Setter Property="BackgroundColor" Value="#2196F3"></Setter>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Frame" Binding="{Binding State}" Value="Excluded">
+                                    <Setter Property="BackgroundColor" Value="#808080"></Setter>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Frame" Binding="{Binding State}" Value="Impossible">
+                                    <Setter Property="BackgroundColor" Value="	#B22222"></Setter>
+                                </DataTrigger>
+                            </Frame.Triggers>
+                            <StackLayout Orientation="Horizontal" >
+                                <Label Text="{Binding Evidence}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="24"/>
+                                <Button Text="X" TextColor="Black" FontSize="18" HorizontalOptions="End"
+                                        VerticalOptions="End" Clicked="ToggleExcludedEvidence" BindingContext="{Binding Evidence}" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label Text="{Binding PossibleGhosts}" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+    </StackLayout>
+
+
+</ContentPage>
