@@ -20,6 +20,9 @@ namespace PhasmophobiaJournal.Domain
         GhostWriting,
 
         [Description("Freezing Temperatures")]
-        FreezingTemperatures
+        FreezingTemperatures,
+
+        [Description("D.O.T.S Projector")]
+        DotsProjector
     }
 }

@@ -17,9 +17,9 @@ namespace PhasmophobiaJournal.Providers
                     Weakness = "Using Smudge Sticks on a Spirit will stop it attacking for a long period of time",
                     Evidences = new List<Evidence>
                     {
-                        Evidence.Fingerprints,
-                        Evidence.GhostWriting,
-                        Evidence.SpiritBox
+                        Evidence.EMFLevel5,
+                        Evidence.SpiritBox,
+                        Evidence.GhostWriting
                     }
                 },
                 new Ghost
@@ -29,9 +29,9 @@ namespace PhasmophobiaJournal.Providers
                     Weakness = "Wraiths have a toxic reaction to Salt",
                     Evidences = new List<Evidence>
                     {
-                        Evidence.Fingerprints,
-                        Evidence.FreezingTemperatures,
-                        Evidence.SpiritBox
+                        Evidence.EMFLevel5,
+                        Evidence.SpiritBox,
+                        Evidence.DotsProjector
                     }
                 },
                 new Ghost
@@ -41,9 +41,9 @@ namespace PhasmophobiaJournal.Providers
                     Weakness = "Taking a photo of the Phantom will make it temporarily disappear",
                     Evidences = new List<Evidence>
                     {
-                        Evidence.EMFLevel5,
-                        Evidence.FreezingTemperatures,
-                        Evidence.GhostOrb
+                        Evidence.SpiritBox,
+                        Evidence.Fingerprints,
+                        Evidence.DotsProjector
                     }
                 },
                 new Ghost
@@ -53,9 +53,9 @@ namespace PhasmophobiaJournal.Providers
                     Weakness = "A Poltergeist is almost ineffective in an empty room",
                     Evidences = new List<Evidence>
                     {
+                        Evidence.SpiritBox,
                         Evidence.Fingerprints,
-                        Evidence.GhostOrb,
-                        Evidence.SpiritBox
+                        Evidence.GhostWriting
                     }
                 },
                 new Ghost
@@ -65,9 +65,9 @@ namespace PhasmophobiaJournal.Providers
                     Weakness = "Banshees fear the Crucifix and will be less aggressive when near one",
                     Evidences = new List<Evidence>
                     {
-                        Evidence.EMFLevel5,
                         Evidence.Fingerprints,
-                        Evidence.FreezingTemperatures
+                        Evidence.GhostOrb,
+                        Evidence.DotsProjector
                     }
                 },
                 new Ghost
@@ -78,8 +78,8 @@ namespace PhasmophobiaJournal.Providers
                     Evidences = new List<Evidence>
                     {
                         Evidence.EMFLevel5,
-                        Evidence.GhostOrb,
-                        Evidence.SpiritBox
+                        Evidence.Fingerprints,
+                        Evidence.FreezingTemperatures
                     }
                 },
                 new Ghost
@@ -89,9 +89,9 @@ namespace PhasmophobiaJournal.Providers
                     Weakness = "Turning the lights on around the Mare will lower it’s chance to attack",
                     Evidences = new List<Evidence>
                     {
-                        Evidence.FreezingTemperatures,
+                        Evidence.SpiritBox,
                         Evidence.GhostOrb,
-                        Evidence.SpiritBox
+                        Evidence.GhostWriting
                     }
                 },
                 new Ghost
@@ -101,9 +101,9 @@ namespace PhasmophobiaJournal.Providers
                     Weakness = "Hiding from the Revenant will cause it to move very slowly",
                     Evidences = new List<Evidence>
                     {
-                        Evidence.EMFLevel5,
-                        Evidence.Fingerprints,
-                        Evidence.GhostWriting
+                        Evidence.GhostOrb,
+                        Evidence.GhostWriting,
+                        Evidence.FreezingTemperatures
                     }
                 },
                 new Ghost
@@ -114,8 +114,8 @@ namespace PhasmophobiaJournal.Providers
                     Evidences = new List<Evidence>
                     {
                         Evidence.EMFLevel5,
-                        Evidence.GhostOrb,
-                        Evidence.GhostWriting
+                        Evidence.GhostWriting,
+                        Evidence.FreezingTemperatures
                     }
                 },
                 new Ghost
@@ -125,9 +125,9 @@ namespace PhasmophobiaJournal.Providers
                     Weakness = "Asking a Demon successful questions on the Ouija Board won’t lower the users sanity",
                     Evidences = new List<Evidence>
                     {
-                        Evidence.FreezingTemperatures,
+                        Evidence.Fingerprints,
                         Evidence.GhostWriting,
-                        Evidence.SpiritBox
+                        Evidence.FreezingTemperatures
                     }
                 },
                 new Ghost
@@ -137,9 +137,9 @@ namespace PhasmophobiaJournal.Providers
                     Weakness = "Smudging the Yurei’s room will cause it to not wander around the location for a long time",
                     Evidences = new List<Evidence>
                     {
-                        Evidence.FreezingTemperatures,
                         Evidence.GhostOrb,
-                        Evidence.GhostWriting
+                        Evidence.FreezingTemperatures,
+                        Evidence.DotsProjector
                     }
                 },
                 new Ghost
@@ -150,18 +150,8 @@ namespace PhasmophobiaJournal.Providers
                     Evidences = new List<Evidence>
                     {
                         Evidence.EMFLevel5,
-                        Evidence.GhostWriting,
-                        Evidence.SpiritBox
-                    }
-                },
-                new Ghost
-                {
-                    Type = "Yokai",
-                    Evidences = new List<Evidence>
-                    {
-                        Evidence.SpiritBox,
-                        Evidence.GhostOrb,
-                        Evidence.GhostWriting
+                        Evidence.FreezingTemperatures,
+                        Evidence.DotsProjector
                     }
                 },
                 new Ghost
@@ -171,6 +161,36 @@ namespace PhasmophobiaJournal.Providers
                     {
                         Evidence.Fingerprints,
                         Evidence.GhostOrb,
+                        Evidence.FreezingTemperatures
+                    }
+                },
+                new Ghost
+                {
+                    Type = "Yokai",
+                    Evidences = new List<Evidence>
+                    {
+                        Evidence.SpiritBox,
+                        Evidence.GhostOrb,
+                        Evidence.DotsProjector
+                    }
+                },
+                new Ghost
+                {
+                    Type = "Goryo",
+                    Evidences = new List<Evidence>
+                    {
+                        Evidence.EMFLevel5,
+                        Evidence.Fingerprints,
+                        Evidence.DotsProjector
+                    }
+                },
+                new Ghost
+                {
+                    Type = "Myling",
+                    Evidences = new List<Evidence>
+                    {
+                        Evidence.EMFLevel5,
+                        Evidence.Fingerprints,
                         Evidence.GhostWriting
                     }
                 },

@@ -17,7 +17,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                        <Frame BackgroundColor="#2196F3" Padding="5" CornerRadius="0">
                             <Frame.Triggers>
                                 <DataTrigger TargetType="Frame" Binding="{Binding State}" Value="Current">
                                     <Setter Property="BackgroundColor" Value="#32CD32"></Setter>
@@ -34,7 +34,7 @@
                             </Frame.Triggers>
                             <StackLayout Orientation="Horizontal" >
                                 <Label Text="{Binding Evidence}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="24"/>
-                                <Button Text="X" TextColor="Black" FontSize="18" HorizontalOptions="End"
+                                <Button Text="X" TextColor="Black" FontSize="14" HorizontalOptions="End"
                                         VerticalOptions="End" Clicked="ToggleExcludedEvidence" BindingContext="{Binding Evidence}" />
                             </StackLayout>
                         </Frame>
